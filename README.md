@@ -60,6 +60,14 @@ PDF сохраняются в `~/Documents/ru-docs` (или в папку из �
 npm test   # создаёт настоящие PDF и PNG во временной папке
 ```
 
+## Нужна настройка или доработка?
+
+Подключу этот сервер под ключ: установка, настройка под ваши данные и процессы, доработка под нестандартные поля,
+ежедневные сводки. Пишите в Telegram **[@penmadebykisss](https://t.me/penmadebykisss)** или оставьте заявку на
+[penmadebykisss.github.io](https://penmadebykisss.github.io).
+
+*Need help setting this up or a custom MCP server? Telegram [@penmadebykisss](https://t.me/penmadebykisss).*
+
 ## English
 
 **ru-docs-mcp** lets AI assistants issue Russian business paperwork as PDF: invoices (счёт на оплату) with a bank payment QR code
