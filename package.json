@@ -1,6 +1,6 @@
 {
   "name": "ru-docs-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Russian business paperwork: invoices with payment QR (GOST R 56042), acts of completed work, payment QR codes and amounts in words — PDF, no API keys",
   "type": "module",
   "bin": { "ru-docs-mcp": "src/index.js" },

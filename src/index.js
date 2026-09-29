@@ -12,7 +12,7 @@ import { amountInWords, numberToWords, formatMoney } from './words.js';
 import { validateParty, computeTotals, paymentQrPayload } from './model.js';
 import { renderInvoice, renderAct } from './render.js';
 
-const server = new McpServer({ name: 'ru-docs', version: '1.0.0' }, {
+const server = new McpServer({ name: 'ru-docs', version: '1.0.1' }, {
   instructions: 'Бухгалтерские документы РФ в PDF: счёт на оплату (с QR-кодом для оплаты из банковского приложения), акт выполненных работ, ' +
     'платёжный QR, сумма прописью. Реквизиты сторон (ИНН, КПП, БИК, счёт) проверяются по контрольным суммам до создания файла. ' +
     'Если реквизитов нет, спросите пользователя или возьмите их из сервера проверки контрагентов (например ru-business-mcp: company_check, bank_by_bik). ' +
@@ -166,7 +166,7 @@ server.registerTool('amount_in_words', {
     currency: z.enum(['RUB', 'USD', 'EUR', 'CNY', 'none']).default('RUB').describe('Валюта или none — только число'),
     minor_in_words: z.boolean().default(false).describe('Копейки/центы тоже словами (по умолчанию цифрами)'),
   },
-  annotations: { readOnlyHint: true, openWorldHint: false },
+  annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false },
 }, async ({ amount, currency, minor_in_words }) => {
   try {
     if (currency === 'none') {
